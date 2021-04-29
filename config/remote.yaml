@@ -1,0 +1,9 @@
+Active: geoedf
+Remotes:
+  SylabsCloud:
+    URI: cloud.sylabs.io
+    System: true
+  geoedf:
+    URI: www.registry.geoedf.org
+    Token: 6546024ca12b4389edec2940479d0a20de099dbd
+    System: false

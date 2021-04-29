@@ -1,0 +1,12 @@
+$1:
+  Input:
+    FAOInput:
+      dataset_codes: ['RL','MK','OA','PP','QC','QL']
+$2:
+  SimpleDataClean:
+    start_year: 2000
+    end_year: 2005
+    fao_input_dir: dir($1)
+$3:
+  CSV2HAR:
+    csvfile: $2
