@@ -15,7 +15,7 @@ job planning, and execution of declarative GeoEDF workflows encoded in YAML synt
 for planning and executing GeoEDF workflows on diverse compute resources (local machine, Condor pool, or HPC system).
 
 This demo is self-contained and will illustrate the intuitive workflow YAML syntax, and the use of the GeoEDF workflow engine to execute 
-these workflows. Specifically, this demo includes the following two Jupyter notebooks:
+these workflows. Specifically, this demo includes the following two Jupyter notebooks in the _geoedf_ folder:
 
 1. A notebook demonstrating a hydrologic data preparation workflow that utilizes pre-existing data connectors and processors to acquire MODIS data from a NASA DAAC and aggregate it across each of the polygons in a given watershed shapefile.
 2. A notebook demonstrating how a new Shapefile2GeoJSON processor can be built and subsequently used in a new workflow that post-processes the resulting shapefile from step 1 to make it easier to visualize using map libraries like Folium.
