@@ -2,7 +2,7 @@ FROM centos:centos7
 
 RUN yum -y update | /bin/true
 
-RUN groupadd --gid 808 ec-group
+RUN groupadd --gid 808 earthcube
 RUN useradd --gid 808 --uid 550 --create-home --password 'earthcube' earthcube
 
 # Configure Sudo
@@ -112,8 +112,9 @@ RUN echo -e "export PATH=/home/earthcube/pegasus/dist/pegasus/bin:/home/earthcub
 RUN echo -e "export PYTHONPATH=/home/earthcube/pegasus/dist/pegasus/lib64/python3.6/site-packages" >> /home/earthcube/.bashrc
 
 # Set notebook password to 'earthcube'. This pw will be used instead of token authentication
-RUN mkdir /home/earthcube/.jupyter \ 
-    && echo "{ \"NotebookApp\": { \"password\": \"sha1:0B7D9AD9630809EA27929C6C2157844742354EA9\" } }" >> /home/earthcube/.jupyter/jupyter_notebook_config.json
+#RUN mkdir /home/earthcube/.jupyter \ 
+#    && echo "{ \"NotebookApp\": { \"password\": \"sha1:0B7D9AD9630809EA27929C6C2157844742354EA9\" } }" >> /home/earthcube/.jupyter/jupyter_notebook_config.json
+RUN mkdir /home/earthcube/.jupyter
 
 # ------------------------------
 # GeoEDF specific section begins
